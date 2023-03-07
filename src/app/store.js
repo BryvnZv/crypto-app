@@ -3,12 +3,6 @@ import { configureStore } from "@reduxjs/toolkit";
 import { cryptoApi } from "../services/cryptoApi";
 import { cryptoNewsApi } from "../services/cryptoNewsApi";
 
-// export default configureStore({
-//   reducer: {
-//     [cryptoApi.reducerPath]: cryptoApi.reducer,
-//   },
-// });
-
 export default configureStore({
   reducer: {
     [cryptoApi.reducerPath]: cryptoApi.reducer,
@@ -19,6 +13,4 @@ export default configureStore({
       cryptoApi.middleware,
       cryptoNewsApi.middleware
     ),
-  // middleware: (getDefaultMiddleware) =>
-  //   getDefaultMiddleware().concat(cryptoNewsApi.middleware),
 });
