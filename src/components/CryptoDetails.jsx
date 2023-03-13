@@ -89,13 +89,13 @@ const CryptoDetails = () => {
       ),
       icon: <ExclamationCircleOutlined />,
     },
-    {
-      title: "Total Supply",
-      value: `$ ${
-        cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)
-      }`,
-      icon: <ExclamationCircleOutlined />,
-    },
+    // {
+    //   title: "Total Supply",
+    //   value: `$ ${
+    //     cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)
+    //   }`,
+    //   icon: <ExclamationCircleOutlined />,
+    // },
     {
       title: "Circulating Supply",
       value: `$ ${
@@ -127,7 +127,11 @@ const CryptoDetails = () => {
           <Option key={date}>{date}</Option>
         ))}
       </Select>
-      {/* line chart  */}
+      {/* <LineChart
+        coinHistory={coinHistory}
+        currentPrice={millify(cryptoDetails?.price)}
+        coinName={cryptoDetails?.name}
+      /> */}
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
@@ -172,7 +176,7 @@ const CryptoDetails = () => {
           <Title level={3} className="coin-details-heading">
             What is {cryptoDetails.name}?
           </Title>
-          {HTMLReactParser(cryptoDetails.description)}
+          {HTMLReactParser(cryptoDetails?.description)}
         </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">
