@@ -118,7 +118,7 @@ const CryptoDetails = () => {
         </p>
       </Col>
 
-      <Select
+      {/* <Select
         defaultValue="7d"
         className="select-timeperiod"
         placeholder="Select Time Period"
@@ -127,7 +127,7 @@ const CryptoDetails = () => {
         {time.map((date) => (
           <Option key={date}>{date}</Option>
         ))}
-      </Select>
+      </Select> */}
       {/* {console.log(timeperiod)} */}
       <LineChart
         coinHistory={coinHistory}
